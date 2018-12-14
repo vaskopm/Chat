@@ -1,0 +1,12 @@
+ {{messages.length}} messages received so far...
+ 
+ <br/>
+ 
+ <div ng-repeat="m in messages | orderBy:'time' : reverse = true">
+ 
+{{m.message}} by {{m.name}} on {{m.time | date : 'dd-MM-yyyy H:mm:ss'}} 
+<button type="button" class="close" aria-label="Close" ng-click="delMessage(m)">
+  <span aria-hidden="true">&times;</span>
+</button>
+ 
+ </div>
